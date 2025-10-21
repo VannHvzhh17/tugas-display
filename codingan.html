@@ -10,71 +10,117 @@
   <header>
     <h1>Kafe Kopi Kita</h1>
     <nav class="main-nav">
-      <a href="#">Beranda</a>
-      <a href="#">Menu</a>
-      <a href="#">Promo</a>
-      <a href="#">Kontak</a>
+      <a href="beranda.html">Beranda</a>
+      <a href="menu.html">Menu</a>
+      <a href="promo.html">Promo</a>
+      <a href="kontak.html">Kontak</a>
     </nav>
   </header>
-<main>
-  <section class="hero">
-    <h2>Selamat datang di Kafe Kopi Kita</h2>
-    <p>Menawarkan kopi terbaik dengan suasana hangat. Scroll ke bawah untuk melihat menu kami.</p>
-  </section>
+</nav>
 
-  <section class="menu">
-    <h3>Menu Unggulan</h3>
 
-    <div class="card">
-      <img src="expresso.jpeg" alt="Espresso">
-      <h4>Espresso</h4>
-      <p class="price">Rp 15.000</p>
-      <button class="buy">Beli</button>
-    </div>
+    <!-- Hero -->
+    <section class="hero">
+      <h2>Selamat datang di Kafe Kopi Kita</h2>
+      <p>Menawarkan kopi terbaik dan makanan lezat dengan suasana hangat dan nyaman. Scroll ke bawah untuk melihat pilihan kami.</p>
+    </section>
 
-    <div class="card">
-      <img src="late.jpeg" alt="Latte">
-      <h4>Latte</h4>
-      <p class="price">Rp 20.000</p>
-      <button class="buy">Beli</button>
-    </div>
+    <!-- Menu Minuman -->
+    <section class="menu">
+      <h3>Menu Minuman</h3>
+      <p>Segarkan harimu dengan pilihan kopi dan minuman khas kami ☕</p>
+      <p style="color:#fdd835; font-style:italic;">✨ "Setiap tegukan membawa cerita — nikmati aroma dan rasa terbaik dari barista kami!" ✨</p>
 
-    <div class="card">
-      <img src="cappucino.jpeg" alt="Cappuccino">
-      <h4>Cappuccino</h4>
-      <p class="price">Rp 22.000</p>
-      <button class="buy">Beli</button>
-    </div>
+      <div class="menu-grid">
+        <div class="card">
+          <img src="expresso.jpeg" alt="Espresso">
+          <h4>Espresso</h4>
+          <p class="price">Rp 15.000</p>
+          <button class="buy">Beli</button>
+        </div>
 
-    <div class="card">
-      <img src="mocha.jpg" alt="Mocha">
-      <h4>Mocha</h4>
-      <p class="price">Rp 25.000</p>
-      <button class="buy">Beli</button>
-    </div>
+        <div class="card">
+          <img src="late.jpeg" alt="Latte">
+          <h4>Latte</h4>
+          <p class="price">Rp 20.000</p>
+          <button class="buy">Beli</button>
+        </div>
 
-    <div class="card">
-  <img src="" alt="KentangGoreng">
-  <h4>KentangGoreng</h4>
-  <p class="price">Rp 20.000</p>
-  <button class="buy">Beli</button>
+        <div class="card">
+          <img src="cappucino.jpeg" alt="Cappuccino">
+          <h4>Cappuccino</h4>
+          <p class="price">Rp 22.000</p>
+          <button class="buy">Beli</button>
+        </div>
 
-    </div>
+        <div class="card">
+          <img src="mocha.jpeg" alt="Mocha">
+          <h4>Mocha</h4>
+          <p class="price">Rp 25.000</p>
+          <button class="buy">Beli</button>
+        </div>
+      </div>
+    </section>
 
-    <div class="class"></div>
-    <div class="main">
+    <!-- Menu Makanan -->
+    <section class="menu">
+      <h3>Menu Makanan</h3>
+      <p>Nikmati makanan hangat yang cocok jadi teman ngopi kamu 🍽️</p>
+      <p style="color:#fdd835; font-style:italic;">🌿 “Setiap gigitan dibuat dengan cinta — dari dapur kami langsung ke hatimu.” 🌿</p>
 
-      
-    </div>
+      <div class="menu-grid">
+        <div class="card">
+          <img src="Photo crispy french fries with ketchup i….jpeg" alt="Kentang Goreng">
+          <h4>Kentang Goreng</h4>
+          <p class="price">Rp 20.000</p>
+          <button class="buy">Beli</button>
+        </div>
 
-    <p>Silahkan dinikmati menu yang telah anda pesan</p>
-    
-  </section>
+        <div class="card">
+          <img src="pizza.jpeg" alt="Pizza">
+          <h4>Pizza</h4>
+          <p class="price">Rp 150.000</p>
+          <button class="buy">Beli</button>
+        </div>
 
-</main>
-  
+        <div class="card">
+          <img src="Download Nasi Goreng a Delicious Indonesian Food for free.jpeg" alt="Nasi Goreng">
+          <h4>Nasi Goreng</h4>
+          <p class="price">Rp 20.000</p>
+          <button class="buy">Beli</button>
+        </div>
+
+        <div class="card">
+          <img src="miegoreng.jpeg" alt="Mie Goreng">
+          <h4>Mie Goreng</h4>
+          <p class="price">Rp 20.000</p>
+          <button class="buy">Beli</button>
+        </div>
+      </div>
+
+       
+  </main>
+
   <footer>
-    <p>© 2025 Kafe Kopi Kita — Karya rifa, thalita, khanza, shyla, evan, rajaa </p>
+    <p>© 2025 Kafe Kopi Kita — Karya Rifa, Thalita, Khanza, Shyla, Evan, Rajaa</p>
   </footer>
+
+  <!-- Tambahan CSS untuk posisi menu di tengah -->
+  <style>
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 260px); /* 2 kolom pas ukuran card */
+      justify-content: center; /* agar di tengah */
+      gap: 40px 60px; /* jarak antar kartu */
+      margin-top: 30px;
+    }
+
+    /* agar tampak rapi di layar kecil */
+    @media (max-width: 600px) {
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </body>
 </html>
