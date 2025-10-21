@@ -1,160 +1,171 @@
-/* Reset sederhana */
+/* RESET DASAR */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Global */
+/* BODY */
 body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  line-height: 1.4;
-  color: #222;
-  background: linear-gradient(180deg, #fff, #f4f4f8);
-  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(180deg, #ffeef2, #fef6f0, #f4fafc);
+  color: #4b2e2b;
   min-height: 100vh;
-  background-image: url("bckground1.jpeg");
-  background-size: cover;
-  background-position: center;
-  position: relative;
+  overflow-x: hidden;
+  perspective: 1000px;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.35);
-  z-index: 0;
-  pointer-events: none;
-}
-
-header, .hero, .menu, footer {
-  position: relative;
-  z-index: 1;
-}
-
-/* Header */
+/* HEADER */
 header {
   text-align: center;
-  margin-bottom: 18px;
+  padding: 30px 0; /* lebih lega */
+  background: linear-gradient(90deg, #ffcfd2, #c7eaff, #f5e6d3);
+  box-shadow: 0 4px 25px rgba(255, 195, 210, 0.5);
+  border-bottom: 2px solid #f8d7da;
+  margin-bottom: 40px; /* jarak bawah supaya tidak dempet */
 }
 
 header h1 {
-  font-size: 1.8rem;
-  margin-bottom: 8px;
-  color: #fff;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  font-size: 2rem;
+  color: #523a34;
+  text-shadow: 0 2px 8px rgba(255, 182, 193, 0.4);
+  letter-spacing: 1px;
+  margin-bottom: 12px; /* jarak antara h1 dan nav */
 }
 
-/* NAV */
+/* NAVIGATION */
+.main-nav {
+  margin-top: 10px;
+}
+
 .main-nav a {
-  display: inline;
-  color: #222;
-  background: #a77568;
-  padding: 8px 12px;
+  color: #523a34;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 10px 16px;
   margin: 0 6px;
-  border-radius: 6px;
+  border-radius: 10px;
   text-decoration: none;
   font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 182, 193, 0.5);
 }
 
 .main-nav a:hover {
-  opacity: 0.95;
-  transform: translateY(-2px);
+  background: #ffdee2;
+  color: #4b2e2b;
+  box-shadow: 0 0 15px rgba(255, 182, 193, 0.8);
+  transform: translateY(-3px);
 }
 
-/* HERO */
+/* HERO SECTION */
 .hero {
-  display: block;
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 12px;
-  padding: 18px;
-  margin-bottom: 24px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  margin: 40px auto;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  padding: 30px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 40px rgba(255, 182, 193, 0.3);
+  transform: rotateX(5deg);
 }
 
 .hero h2 {
-  color: #3f3d56;
-  margin-bottom: 8px;
+  color: #d47b8a;
+  margin-bottom: 10px;
 }
 
-/* Menu */
+.hero span {
+  color: #e9a4a6;
+}
+
+.hero p {
+  color: #6a4e42;
+}
+
+/* MENU SECTION */
 .menu {
   text-align: center;
+  padding: 20px;
 }
 
 .menu h3 {
-  margin-bottom: 14px;
-  color: #fff;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #d47b8a;
+  text-shadow: 0 0 10px #ffd9df;
 }
 
-/* Card */
+/* CARD DESIGN */
 .card {
   display: inline-block;
-  width: 260px;
-  vertical-align: top;
-  margin: 10px;
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 12px;
-  padding: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  perspective: 1000px; /* Menambahkan perspektif 3D */
+  background: linear-gradient(180deg, #ffffff, #fff6f8, #f9f3ec);
+  border-radius: 15px;
+  margin: 15px;
+  width: 240px;
+  padding: 15px;
+  border: 1px solid #f0dada;
+  box-shadow: 0 10px 25px rgba(219, 176, 160, 0.2);
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: rotateY(10deg) translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(219, 176, 160, 0.4);
 }
 
 .card img {
   width: 100%;
-  border-radius: 8px;
-  display: block;
-  margin-bottom: 10px;
+  border-radius: 10px;
+  height: 150px;
   object-fit: cover;
-  height: 160px;
+  border: 1px solid #f5d1c1;
 }
 
+/* CARD TEXT */
 .card h4 {
-  margin-bottom: 6px;
-  color: #222;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #a96c5a;
 }
 
-.card .price {
-  color: #b72b54;
-  font-weight: 700;
-  margin-bottom: 10px;
+.price {
+  margin: 8px 0;
+  font-weight: bold;
+  color: #d47b8a;
 }
 
-.card .buy {
-  display: block;
-  width: 100%;
-  padding: 10px;
+/* BUTTON */
+.buy {
+  background: linear-gradient(90deg, #ffdde1, #fce5cd, #d6f0ff);
   border: none;
-  border-radius: 8px;
-  background: linear-gradient(90deg, #ff9a9e, #fad0c4);
-  color: #4a002b;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  font-weight: bold;
   cursor: pointer;
-  font-weight: 700;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: #523a34;
+  transition: all 0.3s ease;
 }
 
-.card .buy:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(255, 90, 120, 0.15);
+.buy:hover {
+  box-shadow: 0 0 20px rgba(255, 200, 210, 0.8);
+  transform: translateY(-3px);
 }
 
-.card:hover {
-  transform: translateY(-10px) rotateY(10deg); /* Efek rotasi 3D saat hover */
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-}
-
-/* Footer */
+/* FOOTER */
 footer {
-  display: block;
   text-align: center;
-  margin-top: 30px;
-  color: #fff;
-  z-index: 1;
+  padding: 20px;
+  background: linear-gradient(90deg, #ffeef2, #f5e6d3, #d6f0ff);
+  color: #4b2e2b;
+  margin-top: 40px;
+  border-top: 2px solid #f8d7da;
+  box-shadow: 0 -4px 20px rgba(255, 182, 193, 0.3);
 }
 
+/* JARAK ANTARA HEADER DAN MAIN */
+main {
+  margin-top: 20px;
+}
