@@ -1,4 +1,4 @@
-/* Reset sederhana */
+/* Reset */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,26 +7,23 @@
 
 /* Global */
 body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  line-height: 1.4;
-  color: #222;
-  background: linear-gradient(180deg, #fff, #f4f4f8);
-  padding: 20px;
+  font-family: 'Georgia', serif;
+  background: linear-gradient(135deg, #252424, rgb(83, 41, 41), #c49e70);
+  color: #fdf6e3;
+  line-height: 1.6;
+  padding: 0px;
   min-height: 100vh;
-  background-image: url("bckground1.jpeg");
-  background-size: cover;
-  background-position: center;
+  background-attachment: fixed;
   position: relative;
 }
 
 body::before {
   content: "";
   position: fixed;
-  left: 0;
-  top: 0;
+  top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.4);
   z-index: 0;
   pointer-events: none;
 }
@@ -39,122 +36,152 @@ header, .hero, .menu, footer {
 /* Header */
 header {
   text-align: center;
-  margin-bottom: 18px;
+  margin-bottom: 30px;
 }
 
 header h1 {
-  font-size: 1.8rem;
-  margin-bottom: 8px;
-  color: #fff;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  font-size: 3rem;
+  background: linear-gradient(90deg, #c49e70, #fff3d1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* NAV */
+/* Navigation */
 .main-nav a {
-  display: inline;
-  color: #222;
-  background: #a77568;
-  padding: 8px 12px;
+  display: inline-block;
+  background: linear-gradient(45deg, #c49e70, #fdf6e3);
+  padding: 10px 18px;
   margin: 0 6px;
-  border-radius: 6px;
+  border-radius: 30px;
+  color: #1c1c1c;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
 .main-nav a:hover {
-  opacity: 0.95;
-  transform: translateY(-2px);
+  background: linear-gradient(45deg, #fff3d1, #c49e70);
+  color: #3e2723;
+  transform: translateY(-3px);
 }
 
-/* HERO */
+/* Hero Section */
 .hero {
-  display: block;
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 12px;
-  padding: 18px;
-  margin-bottom: 24px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  background: rgba(255, 243, 209, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  backdrop-filter: blur(6px);
 }
 
 .hero h2 {
-  color: #3f3d56;
-  margin-bottom: 8px;
+  font-size: 2rem;
+  color: #fff3d1;
+  margin-bottom: 10px;
 }
 
-/* Menu */
+.hero p {
+  font-size: 1.1rem;
+  color: #e0d3b8;
+}
+
+/* Menu Section */
 .menu {
   text-align: center;
 }
 
 .menu h3 {
-  margin-bottom: 14px;
-  color: #fff;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #fdd835, #c49e70);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 
+    2px 2px 6px rgba(0, 0, 0, 0.5),
+    -1px -1px 2px rgba(255, 255, 255, 0.2);
+  letter-spacing: 1px;
 }
 
-/* Card */
+/* Card Style */
 .card {
   display: inline-block;
   width: 260px;
+  margin: 15px;
+  background: linear-gradient(145deg, #2e1d17, #3e2723);
+  border-radius: 20px;
+  padding: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
   vertical-align: top;
-  margin: 10px;
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 12px;
-  padding: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  perspective: 1000px; /* Menambahkan perspektif 3D */
+  color: #fdf6e3;
+}
+
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
 
 .card img {
   width: 100%;
-  border-radius: 8px;
-  display: block;
-  margin-bottom: 10px;
-  object-fit: cover;
   height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
 }
 
 .card h4 {
+  font-size: 1.2rem;
+  color: #fdf6e3;
   margin-bottom: 6px;
-  color: #222;
 }
 
 .card .price {
-  color: #b72b54;
-  font-weight: 700;
-  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #fdd835;
+  margin-bottom: 12px;
+  font-weight: bold;
 }
 
+/* Tombol Beli */
 .card .buy {
   display: block;
   width: 100%;
-  padding: 10px;
+  padding: 12px;
+  background: linear-gradient(90deg, #c49e70, #fff3d1);
   border: none;
-  border-radius: 8px;
-  background: linear-gradient(90deg, #ff9a9e, #fad0c4);
-  color: #4a002b;
+  border-radius: 30px;
+  color: #3e2723;
+  font-weight: bold;
   cursor: pointer;
-  font-weight: 700;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.3s ease;
+  font-family: inherit;
 }
 
 .card .buy:hover {
+  background: linear-gradient(90deg, #fff3d1, #fdd835);
+  color: #1c1c1c;
   transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(255, 90, 120, 0.15);
-}
-
-.card:hover {
-  transform: translateY(-10px) rotateY(10deg); /* Efek rotasi 3D saat hover */
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(255, 235, 59, 0.3);
 }
 
 /* Footer */
 footer {
-  display: block;
   text-align: center;
-  margin-top: 30px;
-  color: #fff;
-  z-index: 1;
+  margin-top: 50px;
+  font-size: 0.95rem;
+  color: #e0d3b8;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+ 
+
+
+.card {
+  display: inline-block;
+  margin: 15px;
 }
 
